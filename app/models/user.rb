@@ -9,4 +9,6 @@ class User < ApplicationRecord
   has_many :test, through: :test_passings
 
   enum role: [:client, :admin]
+
+  before_create { self.auth_token = SecureRandom.hex }
 end

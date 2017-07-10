@@ -1,0 +1,2 @@
+class CourceSlide < ApplicationRecord
+end
